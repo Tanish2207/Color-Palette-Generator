@@ -66,8 +66,6 @@ function HSLToHex(h, s, l) {
   return "#" + r + g + b;
 }
 
-
-
 colorPicker.addEventListener('change', () => {
   const hsl = hexToHSL(colorPicker.value);
 
@@ -96,8 +94,29 @@ colorPicker.addEventListener('change', () => {
 
 })
 
-function copyToClipboard() {
-  var copyText = "FFF";
+function copyToClipboard(color1) {
+  var copyText = document.querySelector('#color1').style.backgroundColor;
+  navigator.clipboard.writeText(copyText).then(() => {
+    // Alert the user that the action took place.
+    alert("Copied to clipboard");
+  });
+}
+function copyToClipboard(color2) {
+  var copyText = document.querySelector('#color2').style.backgroundColor;
+  navigator.clipboard.writeText(copyText).then(() => {
+    // Alert the user that the action took place.
+    alert("Copied to clipboard");
+  });
+}
+function copyToClipboard(color3) {
+  var copyText = document.querySelector('#color3').style.backgroundColor;
+  navigator.clipboard.writeText(copyText).then(() => {
+    // Alert the user that the action took place.
+    alert("Copied to clipboard");
+  });
+}
+function copyToClipboard(color4) {
+  var copyText = document.querySelector('#color4').style.backgroundColor;
   navigator.clipboard.writeText(copyText).then(() => {
     // Alert the user that the action took place.
     alert("Copied to clipboard");
